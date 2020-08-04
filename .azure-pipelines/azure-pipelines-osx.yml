@@ -8,8 +8,11 @@ jobs:
     vmImage: macOS-10.14
   strategy:
     matrix:
-      osx_64_:
-        CONFIG: osx_64_
+      osx_64_numpy1.16:
+        CONFIG: osx_64_numpy1.16
+        UPLOAD_PACKAGES: 'True'
+      osx_64_numpy1.18:
+        CONFIG: osx_64_numpy1.18
         UPLOAD_PACKAGES: 'True'
     maxParallel: 8
   timeoutInMinutes: 360
