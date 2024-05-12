@@ -11,7 +11,7 @@ source:
 
 build:
   skip: true  # [win]
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -22,6 +22,7 @@ requirements:
     - llvm-openmp  # [osx]
     - libgomp      # [linux]
   host:
+    - python
     - numpy
     - scipy >=1.2.1
     - weave >=0.17.0
@@ -29,6 +30,7 @@ requirements:
     - protobuf >=3.7.1
     - openmpi
   run:
+    - python
     - {{ pin_compatible('numpy') }}
     - scipy >=1.2.1
     - weave >=0.17.0
